@@ -7,14 +7,13 @@
 
 <h2>Les derniers billets</h2>
 
-<p>
 	<?php
         while ($display_blog = $blog->fetch())
         {
 	?>
                 <h3><?= htmlspecialchars($display_blog['title']) ?></h3>
-                Posté le <?= $display_blog['post_date'] ?>, à <?= $display_blog['hour_post_time'] ?> h <?= $display_blog['minute_poste_time'] ?><br/>
-                <?= nl2br(htmlspecialchars($display_blog['message'])) ?><br/>
+                <p>Posté le <?= $display_blog['post_date'] ?>, à <?= $display_blog['hour_post_time'] ?> h <?= $display_blog['minute_poste_time'] ?><br/>
+                    <?= nl2br(htmlspecialchars($display_blog['message'])) ?></p>
 
 
 				<p><a href="back_index.php?delete_post=<?= $display_blog['id'] ?>">Supprimer ce billet</a>
@@ -26,14 +25,14 @@
                 if (! $display_nb == 0)
                 {
             ?>
-                    <a href="back_index.php?comment=<?= $display_blog['id'] ?>">Voir les commentaires (<?= $display_nb ?>) </a>
+                    <p><a href="back_index.php?comment=<?= $display_blog['id'] ?>">Voir les commentaires (<?= $display_nb ?>) </a></p>
             <?php
                 }
 
                 else
                 {
             ?>
-                    <a href="back_index.php?comment=<?= $display_blog['id'] ?>">Il n'y a pas de commentaire sur ce billet. Cliquez ici pour en ajouter un.</a>
+                    <p><a href="back_index.php?comment=<?= $display_blog['id'] ?>">Il n'y a pas de commentaire sur ce billet. Cliquez ici pour en ajouter un.</a></p>
             <?php
                 }
 
@@ -57,7 +56,6 @@
     <?php
         }
     ?>
-</p>
 </p>
 
 <?php

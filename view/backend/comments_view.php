@@ -24,7 +24,7 @@
         <p>Commentaire du <?= $blog_comment['comment_date'] ?>, à <?= $blog_comment['hour_comment_time'] ?>h<?=
               $blog_comment['minute_comment_time'] ?> - par <?= htmlspecialchars($blog_comment['author']) ?> :<br/> <?=
               nl2br(htmlspecialchars($blog_comment['text_comment'])) ?> </p>
-              <p><a href="back_index.php?delete_comment=<?=$blog_comment['id']?>">Supprimer ce commentaire</a>;
+        <p><a href="back_index.php?delete_comment=<?=$blog_comment['id']?>">Supprimer ce commentaire</a></p>;
 <?php
     }
 ?>
