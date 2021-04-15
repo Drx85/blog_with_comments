@@ -7,14 +7,14 @@ require_once (__DIR__ . '/../model/backend/AdminManager.php');
 
 function adminSendPost()
 {
-    $adminManager = new adminManager();
+    $adminManager = new AdminManager();
     $adminManager->insertPost();
     header('Location: back_index.php?send_post=true');
 }
 
 function adminDeletePost()
 {
-    $adminManager = new adminManager();
+    $adminManager = new AdminManager();
     $adminManager->deletePost();
     header('Location: back_index.php?deleted_post=true');
 }
